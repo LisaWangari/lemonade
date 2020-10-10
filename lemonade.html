@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Lemonade</title>
+
+
+</head>
+<style>
+  .btn {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 1}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: auto; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+p{
+text-align: center;
+}
+  /* BASIC STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* NAV BAR */
+#nav_bar {
+  float: right;
+}
+
+#nav_bar li {
+  display: inline-block;
+  padding: 8px;
+}
+
+#nav_bar #sign_in {
+  background: purple; 
+  margin-right: 25px;
+  padding: 7px 15px;
+  border-radius: 3px; 
+  font-weight: bold;
+}
+
+.nav-links {
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li.nav-links a:hover {
+  text-decoration: underline;
+}
+
+#sign_in:hover { 
+  box-shadow: 1px 1px 5px aqua;
+}
+
+#sign_in {
+  color: yellow;
+}
+
+/* GOOGLE AREA */
+.google #google_logo {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 112px;
+  padding-bottom: 20px;
+}
+
+.form {
+  text-align: center;
+}
+
+#form-search { 
+  width: 450px;
+  line-height: 32px;
+  padding: 20px 10px;
+}
+
+.form #form-search {
+  padding: 0 8px;
+}
+
+/*#form-search:hover {
+  border-color: #e4e4e4;
+  padding-top: 0;
+}*/
+
+.buttons {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 300px;
+}
+
+/* FOOTER */
+footer  {
+  background: #f2f2f2;
+  border-top: solid 2px #e4e4e4;
+/*   position: fixed; */
+  bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+  
+}
+
+footer ul li {
+  display: inline;
+  color: #666666;
+  font-size: 14px;
+  padding: 13px;
+}
+
+footer ul {
+  float: left;
+  padding: 1px;
+}
+
+footer ul a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  float: right;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 400px) {
+ 
+ li.nav-links a {
+    display: none;
+  }
+  
+ #google_logo {
+   padding: 0;
+ }
+  
+ .buttons {
+   display: none;
+ }
+  
+ #form-search {
+   width: 80%;
+
+ }
+  
+ footer {
+   bottom: 0;
+ }
+  
+ footer ul {
+   float: none;
+   padding-bottom: 2px;
+    
+ }
+  
+ .footer-left {
+   text-align: center;
+   margin: auto; 
+   padding-top: 10px;
+    
+ }
+  
+ .footer-right {
+   float: none;
+   text-align: center;
+   
+ }
+}
+
+@media screen and (max-width: 565px) {
+ 
+  li.nav-links a {
+    display: none;
+  }
+  
+  
+ #google_logo {
+   padding: 0;
+ }
+  
+ .buttons {
+   display: none;
+ }
+  
+ #form-search {
+   width: 80%;
+
+ }
+  
+ footer {
+/*    bottom: 0;
+   postion: absolute; */
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
+ }
+  
+ footer ul {
+   float: none;
+   padding-bottom: 2px;
+    
+ }
+  
+ .footer-left {
+   text-align: center;
+   margin: auto; 
+   padding-top: 10px;
+    
+ }
+  
+ .footer-right {
+   float: none;
+   text-align: center;
+   
+ }
+}
+	h1{
+		font-family: airstrike;
+		text-align: center;
+	}
+	body{
+		background-image: url('');  
+	}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #121212;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+<h1>Me & Lemonade</h1>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://thebusybaker.ca/wp-content/uploads/2018/04/healthy-3-ingredient-lemonade-fbig1-1.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://image.freepik.com/free-vector/hand-drawn-refreshing-summer-drink_52683-11263.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Kentucky-Lemonade_EXPS_BBBZ16_104392_07A_08_1b-696x696.jpg" style="width:50%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<h2>Ian Lemonade Stand</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#fff;">
+  <p>Lemonade With Mint</p>
+  <p> <img src="https://cdn.shopify.com/s/files/1/0758/3993/products/mint_large.jpg?v=1574142088"></p>
+  <h2>KSH 100</h2>
+  <button class="btn">Learn More To Buy</button>
+  </div>
+  <div class="column" style="background-color:#fff;">
+  <p>Lemonade With Ginger</p>
+  <p> <img src="https://cdn.shopify.com/s/files/1/0758/3993/products/ginger_14db67bf-7775-48fa-ad01-1286a482ef4d_large.jpg?v=1574142159"></p>
+  <h2>KSH 150</h2>
+ <button class="btn">Learn More To Buy</button>
+  </div>
+  <div class="column" style="background-color:#fff;">
+  <p>Pruckly Pear</p>
+  <p> <img src="https://cdn.shopify.com/s/files/1/0758/3993/products/pricklypear_large.jpg?v=1574142334" width="70%"></p>
+<h2>KSH 200</h2>
+ <button class="btn">Learn More To Buy</button>
+  </div>
+  <div class="column" style="background-color:#fff;">
+   <p>Lemonade With Iced Tea</p>
+    <p> <img src="https://cdn.shopify.com/s/files/1/0758/3993/products/icedtea_large.jpg?v=1574142236"></p>
+    <h2>KSH 250</h2>
+    <button class="btn">Learn More To Buy</button>
+  </div>
+  <div class="column" style="background-color:#fff;">
+ <p>Classic Lemonade</p>
+  <p> <img src="https://cdn.shopify.com/s/files/1/0758/3993/products/classic_large.jpg?v=1574142063"></p>
+  <h2>KSH 300</h2>
+  <button class="btn">Learn More To Buy</button>
+  </div>
+</div>
+<h1>@MIKAILASBEES</h1>
+ <button onclick="window.location.href='file:///C:/Users/User/Documents/HTML%20Folder/shoes.html';" class="button button4"> <p aligncenter> <img src="https://shelbyreport.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/09/me-bees-Mikaila-Ulmer-FB.jpg" width="950"></button>
+ <button onclick="window.location.href='file:///C:/Users/User/Documents/HTML%20Folder/shoes.html';" class="button button4"> <p aligncenter> <img src="https://image.cnbcfm.com/api/v1/image/104217733-GettyImages-522773216.jpg?v=1563243552&w=1400&h=950" width="950"></button>
+ <button onclick="window.location.href='file:///C:/Users/User/Documents/HTML%20Folder/shoes.html';" class="button button4"> <p aligncenter> <img src="" width="950"></button>
+ <button onclick="window.location.href='file:///C:/Users/User/Documents/HTML%20Folder/shoes.html';" class="button button4"> <p aligncenter> <img src="https://cdn.shopify.com/s/files/1/0758/3993/t/16/assets/slide_6_986x.jpg?v=16291274641714902493" width="950"></button>
+ <button onclick="window.location.href='file:///C:/Users/User/Documents/HTML%20Folder/super.html';" class="button button4"> <p aligncenter> <img src="https://atxwoman.com/wp-content/uploads/2020/07/Austin-Woman-Mikaila-Ulmer-Me-and-the-bees-Bottles-1024x490.jpg" width="950"></button>
+  <!-- FOOTER -->
+    <footer>
+        <ul class="footer-left">
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">About</a></li> 
+        </ul>
+        <ul class="footer-right">    
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="bs-example">
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">4</a></li>
+            <li class="page-item"><a href="#" class="page-link">5</a></li>
+            <li class="page-item"><a href="#" class="page-link">Next</a></li>
+        </ul>
+    </nav>
+</div>
+    </footer> 
+<script>
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.body.style.backgroundColor = "yellow";
+  } else {
+   document.body.style.backgroundColor = "pink";
+  }
+}
+
+var x = window.matchMedia("(max-width: 1000px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+</script>
+
+<footer>
+Copyright @ 2020. Me & Lemonade. All Rights Reserved
+    </footer>     
+</body>
+</html>
